@@ -1,29 +1,36 @@
-/*var lettersForSOS = "sos123";
-var sosIndex = 0;
+const educationalSites = ["https://blooket.com", "https://kahoot.it", "https://joinmyquiz.com", "https://deltamath.com", "https://quizlet.com", "https://drive.google.com", "https://docs.google.com", "https://forms.google.com", "https://classroom.google.com"];
 
-window.addEventListener("keypress", sosKeyPressListener);
-
-document.getElementById("uv-frame").onload(function() {
-  this.contentWindow.document.addEventListener("keypress", sosKeyPressListener);
-});
-
-function sosKeyPressListener(event) {
-  if (event.key == lettersForSOS[sosIndex]) {
-    sosIndex++;
-    if(sosIndex == lettersForSOS.length) {
-      startSos();
-    }
-  } else {
-    sosIndex = 0;
-  }
+let inIframe
+try {
+    inIframe = window.self !== window.top;
+} catch (e) {
+    inIframe = true;
 }
 
-function startSos() {
-  // retrieve all cookies
-  var Cookies = document.cookie.split(';');
-  // set past expiry to all cookies
-  for (var i = 0; i < Cookies.length; i++) {
-    document.cookie = Cookies[i] + "=; expires=" + new Date(0).toUTCString();
+if (!inIframe) {
+  const popup = open("about:blank", "_blank");
+  if (popup) {
+    const doc = popup.document;
+    const iframe = doc.createElement("iframe");
+    const style = iframe.style;
+    const link = doc.createElement("link");
+
+    const name = "Google Classroom";
+    const icon = "https://lh4.googleusercontent.com/308zu2umP2YA0GwhIQdmlLRUHXdJgApI1YLlfIgBq2Ct0ke885gvRPgW6x8UU2DWDHyKt9HCtF9ayMd0dnYR-ccHj1nG8gEa1kxBvWqBzgRotsgKp0I4btM3yKUwf5IaWA=w1280";
+
+    doc.title = name;
+    link.rel = "icon";
+    link.href = icon;
+
+    iframe.src = location.href;
+    style.position = "fixed";
+    style.top = style.bottom = style.left = style.right = 0;
+    style.border = style.outline = "none";
+    style.width = style.height = "100%";
+
+    doc.head.appendChild(link);
+    doc.body.appendChild(iframe);
+
+    location.replace(educationalSites[(Math.floor(Math.random() * educationalSites.length))]);
   }
-  location.href="https://launchpad.classlink.com/aacps";
-}*/
+}
