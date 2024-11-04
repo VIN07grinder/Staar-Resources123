@@ -6,7 +6,7 @@ import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
 import { join } from "node:path";
 import { hostname } from "node:os";
-import wisp from "wisp-server-node"
+//import wisp from "wisp-server-node"
 import session from "express-session";
 import crypto from 'crypto';
 import config from "./config.js";
@@ -66,14 +66,14 @@ server.on("request", (req, res) => {
   res.setHeader("Cross-Origin-Embedder-Policy", "require-corp");
   app(req, res);
 });
-
+/*
 server.on("upgrade", (req, socket, head) => {
   if (req.url.endsWith("/wisp/"))
     wisp.routeRequest(req, socket, head);
   else
     socket.end();
 });
-
+*/
 let port = parseInt(process.env.PORT || "");
 
 if (isNaN(port)) port = 8080;
