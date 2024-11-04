@@ -26,7 +26,7 @@ async function registerSW() {
   const connection = new BareMux.BareMuxConnection("/baremux/worker.js");
 
   // Register the EpoxyClient transport to be used for network requests
-  let wispUrl = "wss://tomp.app";
+  let wispUrl = (location.protocol === "https:" ? "wss" : "ws") + "://" + location.host + "/wisp/";
   await connection.setTransport("/epoxy/index.mjs", [{ wisp: wispUrl }]);
   await navigator.serviceWorker.register(stockSW);
 }
