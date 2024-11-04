@@ -2,9 +2,9 @@ const educationalSites = ["https://blooket.com", "https://kahoot.it", "https://j
 
 let inIframe
 try {
-    inIframe = window.self !== window.top;
+  inIframe = window.self !== window.top;
 } catch (e) {
-    inIframe = true;
+  inIframe = true;
 }
 
 if (!inIframe) {
@@ -23,11 +23,11 @@ if (!inIframe) {
     link.href = icon;
 
     iframe.src = location.href;
-    style.position = "fixed";
-    style.top = style.bottom = style.left = style.right = 0;
     style.border = style.outline = "none";
     style.width = style.height = "100%";
-
+    style.overflow = "hidden";
+    doc.body.style.margin = style.margin = "-1";
+    style.padding = "-1";
     doc.head.appendChild(link);
     doc.body.appendChild(iframe);
 
