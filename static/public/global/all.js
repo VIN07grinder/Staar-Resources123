@@ -26,8 +26,8 @@ if (!inIframe) {
     style.border = style.outline = "none";
     style.width = style.height = "100%";
     style.overflow = "hidden";
-    doc.body.style.margin = style.margin = "-1";
-    style.padding = "-1";
+    doc.body.style.margin = style.margin = 0;
+    style.padding = 0;
     doc.head.appendChild(link);
     doc.body.appendChild(iframe);
 

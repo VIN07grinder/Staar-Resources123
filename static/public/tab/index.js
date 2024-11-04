@@ -75,9 +75,11 @@ function windowPopout() {
     var iframe = win.document.createElement('iframe');
     iframe.style.width = "100%";
     iframe.style.height = "100%";
+    iframe.style.margin = 0;
     iframe.style.border = "none";
     iframe.src = document.getElementById("uv-frame").contentWindow.location.href;
-    win.document.body.appendChild(iframe)
+    win.document.body.appendChild(iframe);
+    win.document.body.style.margin = 0;
 }
 
 function goForward() {
