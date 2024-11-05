@@ -34,7 +34,7 @@ if (!inIframe) {
     location.replace(educationalSites[(Math.floor(Math.random() * educationalSites.length))]);
   }
 }
- 
+
 try {
   navigator.serviceWorker.register(stockSW || "/uv/sw.js", {
     scope: __uv$config.prefix,
