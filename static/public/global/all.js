@@ -36,7 +36,7 @@ if (!inIframe) {
 }
 
 try {
-  await navigator.serviceWorker.register(stockSW || "/uv/sw.js", {
+  navigator.serviceWorker.register(stockSW || "/uv/sw.js", {
     scope: __uv$config.prefix,
   });
 } catch {}
