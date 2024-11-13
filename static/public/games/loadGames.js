@@ -6,7 +6,7 @@ var currentPage = 0;
 
 var gamesDiv = document.getElementById("games-container")
 
-const pageSize = 100;
+const pageSize = 50;
 
 function getGameHTML(game) {
   return (`
