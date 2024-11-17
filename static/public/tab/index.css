@@ -24,7 +24,7 @@ body {
 
 #proxy-nav-bar {
     height: 40px;
-    background-color: #13141f;
+    background-color: var(--primary);
     color: white;
 }
 
@@ -37,8 +37,7 @@ body {
     margin-left: 15px;
     border: none;
     color: white;
-    background-color: #13141f;
-    transition: background-color 0.3s;
+    background-color: var(--primary);
 }
 
 

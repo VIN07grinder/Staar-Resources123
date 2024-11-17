@@ -40,3 +40,36 @@ try {
     scope: __uv$config.prefix,
   });
 } catch {}
+
+const colorThemes = {
+  "default": [
+    "rgb(19, 20, 31)",
+    "rgb(15, 16, 25)",
+    "rgba(82, 35, 163, 0.5)"
+  ],
+  "legacy": [
+    "rgb(56, 67, 73)",
+    "rgb(29, 30, 34)",
+    "rgba(220, 204, 255, 0.5)"
+  ]
+}
+
+function loadColorTheme() {
+  var theme = localStorage.getItem("theme");
+  if (theme === null) {
+    document.documentElement.style.setProperty("--primary", colorThemes.default[0]);
+    document.documentElement.style.setProperty("--secondary", colorThemes.default[1]);
+    document.documentElement.style.setProperty("--effects", colorThemes.default[2]);
+  } else {
+    document.documentElement.style.setProperty("--primary", colorThemes[theme][0]);
+    document.documentElement.style.setProperty("--secondary", colorThemes[theme][1]);
+    document.documentElement.style.setProperty("--effects", colorThemes[theme][2]);
+  }
+}
+
+loadColorTheme();
+
+function setColorTheme(theme) {
+  localStorage.setItem("theme", theme);
+  loadColorTheme();
+}

@@ -129,16 +129,17 @@ body {
 
 #proxy-nav-bar {
   height: 45px;
-  background-color: var(--primary);
+  background-color: var(--secondary);
   color: white;
 }
 
 .tabBarTab {
-  background-color: var(--secondary);
+  background-color: transparent;
   margin-top: 45px;
   margin-left: 5px;
   height: 45px;
-  border-radius: 8px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
   float: left;
   padding: 8px;
   transition-property: margin-top, background-color;
@@ -146,9 +147,9 @@ body {
 }
 
 #newTab {
-  background-color: var(--secondary);
-  margin-top: 5px;
-  margin-bottom: 5px;
+  background-color: var(--primary);
+  margin-top: 7.5px;
+  margin-bottom: 2.5px;
   margin-left: 10px;
   height: 35px;
   width: 35px;

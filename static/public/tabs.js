@@ -45,11 +45,11 @@ function getTabId() {
 function openTab(tabId) {
   if(document.getElementById("frame" + currentTab)) {
     document.getElementById("frame" + currentTab).style.display = "none";
-    document.getElementById("tab" + currentTab).style.backgroundColor = "var(--primary)";
+    document.getElementById("tab" + currentTab).style.backgroundColor = "var(--secondary)";
   }
   currentTab = tabId;
   document.getElementById("frame" + currentTab).style.display = "block";
-  document.getElementById("tab" + currentTab).style.backgroundColor = "var(--secondary)";
+  document.getElementById("tab" + currentTab).style.backgroundColor = "var(--primary)";
 }
 
 function closeAllTabs() {
