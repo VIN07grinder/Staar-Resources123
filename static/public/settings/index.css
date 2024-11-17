@@ -6,5 +6,5 @@ body, html {
 }
 
 body {
-    background-image: linear-gradient(to bottom, rgb(56, 67, 73), rgb(47, 80, 99));
+    background-image: var(--primary);
 }
