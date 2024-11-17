@@ -24,7 +24,7 @@ body {
 
 #proxy-nav-bar {
     height: 40px;
-    background-color: rgb(29, 30, 34);
+    background-color: #13141f;
     color: white;
 }
 
@@ -37,13 +37,10 @@ body {
     margin-left: 15px;
     border: none;
     color: white;
-    background-color: rgb(29, 30, 34);
+    background-color: #13141f;
     transition: background-color 0.3s;
 }
 
-#nav-bar-address:focus {
-    background-color: rgb(55, 58, 70);
-}
 
 #nav-bar-form {
     height: 40px;
