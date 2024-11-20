@@ -1,22 +1,36 @@
 <!DOCTYPE html>
+
 <head>
-    <title>Settings - Rizz Proxy</title>
-    
-    <link rel="stylesheet" href="/w3.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
-    <link rel="stylesheet" href="index.css" />
-    <link rel="stylesheet" href="/global/navbar.css" />
-    <script src="global/all.js"></script>
+  <title>Settings - Rizz Proxy</title>
+
+  <link rel="stylesheet" href="/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<link rel="stylesheet" href="index.css" />
+<link rel="stylesheet" href="/global/navbar.css" />
+<script src="/global/all.js"></script>
+
 <body>
+  <script src="index.js" defer></script>
 
   <div class="w3-display-container" style="background-color: var(--secondary); padding: 10px; height: 80px;">
     <a href="/" class="w3-display-left"><img class="navbar-logo" src="/falconlink_logo.png"></a>
 
     <div class="w3-display-right">
 
+      <a href="../" class="navbar-link"><i class="fa fa-home navbar-icon"></i></a>
       <a href="/games" class="navbar-link"><i class="fa fa-gamepad navbar-icon"></i></a>
     </div>
   </div>
 
+  <div class="main-div">
+    <p class="title">SETTINGS</p>
+    <div class="settingDiv">
+      <p class="settingTitle">About:Blank Cloak</p>
+      <button onclick="ABCloak(false)" class="settingButton">Activate</button>
+    </div>
+  </div>
+
 </body>
+
 </html>

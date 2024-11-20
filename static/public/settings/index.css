@@ -1,4 +1,5 @@
-body, html {
+body,
+html {
     margin: 0;
     padding: 0;
     width: 100%;
@@ -6,5 +7,58 @@ body, html {
 }
 
 body {
-    background-image: var(--primary);
+    background-color: var(--primary);
+}
+
+.main-div {
+    text-align: center;
+    height: calc(100vh - 80px);
+    margin: 0;
+    overflow-y: auto;
+}
+
+.title {
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 200;
+    font-size: 5em;
+    margin: 0px;
+    color: #e9f1f7;
+}
+
+.settingDiv {
+    height: 200px;
+    display: inline-block;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 16px;
+    background-color: var(--secondary);
+    color: white;
+    transition-duration: 0.2s;
+}
+
+.settingDiv:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px var(--effects);
+}
+
+.settingTitle {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 1.5em;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.settingButton {
+    border: none;
+    border-radius: 4px;
+    background-color: var(--primary);
+    font-size: 15px;
+    padding: 20px;
+    color: white;
+}
+
+.settingButton:hover {
+    color: var(--primary);
+    background-color: #e9f1f7;
 }
