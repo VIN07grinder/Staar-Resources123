@@ -33,3 +33,13 @@ try {
     scope: __uv$config.prefix,
   });
 } catch {}
+var time;
+
+function load() {
+  time = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("hide").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
