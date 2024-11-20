@@ -1,12 +1,5 @@
 const educationalSites = ["https://blooket.com", "https://kahoot.it", "https://joinmyquiz.com", "https://deltamath.com", "https://quizlet.com", "https://drive.google.com", "https://docs.google.com", "https://forms.google.com", "https://classroom.google.com"];
 
-let inIframe
-try {
-  inIframe = window.self !== window.top;
-} catch (e) {
-  inIframe = true;
-}
-
 if (!inIframe) {
   const popup = open("about:blank", "_blank");
   if (popup) {
