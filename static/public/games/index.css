@@ -8,6 +8,7 @@
 body {
   background-color: #13141f;
   overflow: hidden;
+  background-color: var(--primary);
 }
 
 html, body {
@@ -35,11 +36,11 @@ html, body {
 }
 
 .search-bar:focus {
-  box-shadow: 0 0 30px rgba(82, 35, 163, 0.5);
+  box-shadow: 0 0 30px var(--effects);
 }
 
 .pages {
-  color: #777a7d;
+  color: rgb(119, 122, 125);
   margin-bottom: 1vh;
 }
 
@@ -66,7 +67,7 @@ html, body {
   width: 14vw;
   padding: 5px;
   margin: 1vw;
-  background-color: #1b1c26;
+  background-color: var(--secondary);
   border-radius: 10px;
   height: 12vw;
   overflow: hidden;
@@ -75,7 +76,7 @@ html, body {
 
 .game:hover {
   transform: scale(1.1);
-  box-shadow: 0 0 30px rgba(82, 35, 163, 0.5);
+  box-shadow: 0 0 30px var(--effects);
 
 }
 
