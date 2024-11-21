@@ -6,6 +6,10 @@ html {
     height: 100%;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: var(--primary);
 }
@@ -27,13 +31,14 @@ body {
 
 .settingDiv {
     height: 200px;
-    display: inline-block;
     border-radius: 8px;
     padding: 20px;
     margin: 16px;
     background-color: var(--secondary);
     color: white;
     transition-duration: 0.2s;
+    position: relative;
+    float: left;
 }
 
 .settingDiv:hover {
@@ -61,4 +66,10 @@ body {
 .settingButton:hover {
     color: var(--primary);
     background-color: #e9f1f7;
+}
+
+.settingDesc {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 13px;
 }

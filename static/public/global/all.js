@@ -1,12 +1,12 @@
+let inIframe
+try {
+  inIframe = window.self !== window.top;
+} catch (e) {
+  inIframe = true;
+}
+
 function ABCloak(redirectToEducationalSite) {
   const educationalSites = ["https://blooket.com", "https://kahoot.it", "https://joinmyquiz.com", "https://deltamath.com", "https://quizlet.com", "https://drive.google.com", "https://docs.google.com", "https://forms.google.com", "https://classroom.google.com"];
-
-  let inIframe
-  try {
-    inIframe = window.self !== window.top;
-  } catch (e) {
-    inIframe = true;
-  }
 
   if (!inIframe) {
     const popup = open("about:blank", "_blank");
@@ -31,12 +31,25 @@ function ABCloak(redirectToEducationalSite) {
       style.padding = 0;
       doc.head.appendChild(link);
       doc.body.appendChild(iframe);
+      doc.body.innerHTML += `<script>
+      window.onmessage = function(e) {
+        if (e.data == 'cancelABCloak') {
+          location.replace("` + location.href + `");
+        }
+      };
+      </script>`
 
-      if(redirectToEducationalSite) location.replace(educationalSites[(Math.floor(Math.random() * educationalSites.length))]);
+      if (redirectToEducationalSite) location.replace(educationalSites[(Math.floor(Math.random() * educationalSites.length))]);
     }
   }
 }
-ABCloak(true);
+try {
+  if (localStorage.getItem("autoAB") == "true") {
+    ABCloak(true);
+  }
+} catch {
+  ABCloak(true);
+}
 
 try {
   navigator.serviceWorker.register(stockSW || "/uv/sw.js", {

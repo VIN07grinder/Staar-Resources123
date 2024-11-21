@@ -25,10 +25,20 @@
 
   <div class="main-div">
     <p class="title">SETTINGS</p>
+
+    <div class="settingDiv">
+      <p class="settingTitle" style="margin-bottom: 5px;">Auto About:Blank Cloak</p>
+      <p class="settingDesc">This will About:Blank cloak the page<br>the second it is opened, erasing FalconProxy<br>from your search history.</p>
+      <button id="autoABToggle" onclick="localStorage.setItem('autoAB', localStorage.getItem('autoAB') == 'false'); this.innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable'" class="settingButton"></button>
+      <script>document.getElementById("autoABToggle").innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable';</script>
+    </div>
+
     <div class="settingDiv">
       <p class="settingTitle">About:Blank Cloak</p>
-      <button onclick="ABCloak(false)" class="settingButton">Activate</button>
+      <button id="ABCloakButton" onclick="if(inIframe) { window.postMessage('cancelABCloak', '*') } else { ABCloak(false) }" class="settingButton">Activate</button>
+      <script>document.getElementById("ABCloakButton").innerHTML = inIframe?'Deactivate':'Activate';</script>
     </div>
+
   </div>
 
 </body>
