@@ -10,7 +10,8 @@
 </head>
 <link rel="stylesheet" href="/global/navbar.css" />
 <link rel="stylesheet" href="index.css" />
-<link rel="stylesheet" href="w3.css">
+<link rel="stylesheet" href="w3.css" />
+<link rel="stylesheet" href="/global/loadingscreen.css" />
 <script src="uv/uv.bundle.js" defer></script>
 <script src="uv/uv.config.js" defer></script>
 <script src="register-sw.js" defer></script>
@@ -21,8 +22,7 @@
 <script src="tabs.js" defer></script>
 </head>
 
-<body onload="load()">
-  <div style="display: none" id="myDiv">
+<body>
   <div id="proxy-div" class="hide-proxy-div">
     <div id="proxy-nav-bar" class="w3-bar">
       <div class="w3-bar-item w3-bar" id="tabBarTabs">
@@ -59,10 +59,9 @@
     </div>
     </form>
   </div>
-  <script src="browser.js"></script>
-  </div>
+
   <div class="loadcenter">
-  <div class="loading-container" id="hide">
+  <div class="loading-container" id="loadingScreen">
     <div class="loading-text">
       <span>L</span>
       <span>O</span>
