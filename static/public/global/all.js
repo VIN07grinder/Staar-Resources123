@@ -42,6 +42,7 @@ function load() {
 function showPage() {
   document.getElementById("hide").style.display = "none";
   document.getElementById("myDiv").style.display = "block";
+}
 
 const colorThemes = {
   "default": [
