@@ -36,7 +36,7 @@ try {
 var time;
 
 function load() {
-  time = setTimeout(showPage, 3000);
+  time = setTimeout(showPage, 1000);
 }
 
 function showPage() {
