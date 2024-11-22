@@ -22,13 +22,29 @@
       <a href="/games" class="navbar-link"><i class="fa fa-gamepad navbar-icon"></i></a>
     </div>
   </div>
+  <p class="title">SETTINGS</p>
 
   <div class="main-div">
-    <p class="title">SETTINGS</p>
     <div class="settingDiv">
       <p class="settingTitle">About:Blank Cloak</p>
       <button onclick="ABCloak(false)" class="settingButton">Activate</button>
     </div>
+    <div class="settingDiv">
+      <p class="settingTitle">Themes</p>
+      <div class="dropdown">
+        <button class="settingButton">Selector</button>
+        <div class="dropdown-content">
+            <a onclick="setColorTheme('default')">Default</a>
+            <a onclick="setColorTheme('legacy')">Classic</a>
+            <a onclick="setColorTheme('retro')">Retro</a>
+            <a onclick="setColorTheme('strawberry')">Strawberry</a>
+            <a onclick="setColorTheme('cafe')">Cafe</a>
+
+          </div>
+    </div>
+
+    </div>
+
   </div>
 
 </body>
