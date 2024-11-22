@@ -1,5 +1,5 @@
 const educationalSites = ["https://blooket.com", "https://kahoot.it", "https://joinmyquiz.com", "https://deltamath.com", "https://quizlet.com", "https://drive.google.com", "https://docs.google.com", "https://forms.google.com", "https://classroom.google.com"];
-const inIframe = () => window.self !== window.top;
+const inIframe = window.self !== window.top;
 const colorThemes = {
   "default": [
     "rgb(19, 20, 31)",
