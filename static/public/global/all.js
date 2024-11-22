@@ -49,7 +49,12 @@ try {
   });
 } catch { }
 
-setTimeout(showPage, 1000);
+if (sessionStorage.getItem("firstVisit") === null) {
+  setTimeout(showPage, 2500);
+  sessionStorage.setItem("firstVisit", "false");
+} else {
+  showPage();
+}
 
 function showPage() {
   if (document.readyState === "complete" || document.readyState === "loaded") {
