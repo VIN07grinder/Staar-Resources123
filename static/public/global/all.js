@@ -1,3 +1,10 @@
+let inIframe
+try {
+  inIframe = window.self !== window.top;
+} catch (e) {
+  inIframe = true;
+}
+
 function ABCloak(redirectToEducationalSite) {
   const educationalSites = [
     "https://blooket.com",
@@ -42,6 +49,13 @@ function ABCloak(redirectToEducationalSite) {
       style.padding = 0;
       doc.head.appendChild(link);
       doc.body.appendChild(iframe);
+      doc.body.innerHTML += `<script>
+      window.onmessage = function(e) {
+        if (e.data == 'cancelABCloak') {
+          location.replace("` + location.href + `");
+        }
+      };
+      </script>`
 
       if (redirectToEducationalSite)
         location.replace(
@@ -50,7 +64,13 @@ function ABCloak(redirectToEducationalSite) {
     }
   }
 }
-ABCloak(true);
+try {
+  if (localStorage.getItem("autoAB") == "true") {
+    ABCloak(true);
+  }
+} catch {
+  ABCloak(true);
+}
 
 try {
   navigator.serviceWorker.register(stockSW || "/uv/sw.js", {
