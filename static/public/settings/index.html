@@ -22,13 +22,12 @@
       <a href="/games" class="navbar-link"><i class="fa fa-gamepad navbar-icon"></i></a>
     </div>
   </div>
+  <p class="title">SETTINGS</p>
 
   <div class="main-div">
-    <p class="title">SETTINGS</p>
-
     <div class="settingDiv">
       <p class="settingTitle" style="margin-bottom: 5px;">Auto About:Blank Cloak</p>
-      <p class="settingDesc">This will About:Blank cloak the page<br>the second it is opened, erasing FalconProxy<br>from your search history.</p>
+      <p class="settingDesc">This will About:Blank cloak the page the second it is opened, erasing FalconProxy from your search history.</p>
       <button id="autoABToggle" onclick="localStorage.setItem('autoAB', localStorage.getItem('autoAB') == 'false'); this.innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable'" class="settingButton"></button>
       <script>document.getElementById("autoABToggle").innerHTML = localStorage.getItem('autoAB') == 'true'?'Disable':'Enable';</script>
     </div>
@@ -37,6 +36,21 @@
       <p class="settingTitle">About:Blank Cloak</p>
       <button id="ABCloakButton" onclick="if(inIframe) { window.postMessage('cancelABCloak', '*') } else { ABCloak(false) }" class="settingButton">Activate</button>
       <script>document.getElementById("ABCloakButton").innerHTML = inIframe?'Deactivate':'Activate';</script>
+    </div>
+    <div class="settingDiv">
+      <p class="settingTitle">Themes</p>
+      <div class="dropdown">
+        <button class="settingButton">Selector</button>
+        <div class="dropdown-content">
+            <a onclick="setColorTheme('default')">Default</a>
+            <a onclick="setColorTheme('legacy')">Classic</a>
+            <a onclick="setColorTheme('retro')">Retro</a>
+            <a onclick="setColorTheme('strawberry')">Strawberry</a>
+            <a onclick="setColorTheme('cafe')">Cafe</a>
+
+          </div>
+    </div>
+
     </div>
 
   </div>
