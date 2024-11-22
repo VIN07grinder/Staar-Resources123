@@ -30,9 +30,12 @@ html, body {
   padding: 0px 17px;
   border: 1px solid rgb(255, 255, 255, 0.2);
   outline: none;
-  color: white;
+  color: var(--text);
   transition-duration: 0.5s;
 
+}
+::placeholder {
+  color: var(--text);
 }
 
 .search-bar:focus {
@@ -40,7 +43,7 @@ html, body {
 }
 
 .pages {
-  color: rgb(119, 122, 125);
+  color: var(--text);
   margin-bottom: 1vh;
 }
 
@@ -105,7 +108,7 @@ html, body {
   font-weight: 400;
   font-style: normal;
   cursor: pointer;
-  color: white;
+  color: var(--text);
 }
 
 .main-div {
@@ -120,7 +123,7 @@ html, body {
   font-weight: 300;
   font-size: 7em;
   margin: 0px;
-  color: #e9f1f7;
+  color: var(--h1);
 }
 
 @keyframes show-proxy-div {

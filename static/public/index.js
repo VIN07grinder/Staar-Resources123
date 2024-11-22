@@ -32,8 +32,10 @@ function goHome() {
 
 function showProxy() {
   document.getElementById("proxy-div").classList = ["show-proxy-div"];
+  document.getElementById("proxy-div").style.display = "block";
 }
 
 function hideProxy() {
   document.getElementById("proxy-div").classList = ["hide-proxy-div"];
+  document.getElementById("proxy-div").style.display = "none";
 }
