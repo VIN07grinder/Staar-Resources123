@@ -75,7 +75,7 @@ body {
 
 .settingButton:hover {
     color: var(--primary);
-    background-color: #e9f1f7;   
+    background-color: var(--text);
     cursor: pointer;
 }
 
