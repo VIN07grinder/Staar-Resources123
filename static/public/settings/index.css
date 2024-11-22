@@ -84,7 +84,15 @@ body {
     margin-bottom: 5px;
     font-size: 13px;
 }
+.dropbtn {
+    background-color: var(--primary);
+    border: none;
+    border-radius: 4px;
+    font-size: 15px;
+    padding: 20px;
+    color: var(--text);
 
+}
 .dropdown {
     border: none;
     border-radius: 4px; 
@@ -95,11 +103,9 @@ body {
 
 .dropdown-content {
     opacity: 0;
-
     width: 260px;
     display: flex;
     flex-direction: column;
-    visibility: visible;
     position: absolute;
     background-color: var(--primary);
     box-shadow: 0 0 30px var(--effects);
@@ -114,8 +120,7 @@ body {
     text-decoration: none;
     display: block;
 }
-
-.dropdown-content a:hover {
+    .dropdown-content a:hover {
     background-color: #aba2a2;
 }
 
@@ -126,13 +131,36 @@ body {
 }
 
 .settingDesc {
-    margin-top: 5px;
-    margin-bottom: 5px;
+    visibility: hidden;
     font-size: 13px;
 }
-
-.settingDesc {
-    margin-top: 5px;
-    margin-bottom: 5px;
-    font-size: 13px;
+.i {
+    font-family: serif;
+    font-size: small;
+    font-weight: bold;
+    color: var(--text);
+    border: 2px solid var(--text);
+    border-radius: 1em;
+    padding-left: 0.4em;
+    padding-right: 0.4em;
+    margin-left: 10px;
+    text-align: center;
 }
+  .tooltiptext {
+    font-family: "Noto Sans", sans-serif;
+    visibility: hidden;
+    width: 220px;
+    background-color: var(--secondary);
+    border: 0.5px solid white;
+    color: var(--text);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .i:hover .tooltiptext {
+    visibility: visible;
+  }
+  
