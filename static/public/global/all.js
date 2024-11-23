@@ -158,7 +158,7 @@ function setColorTheme(theme) {
 }
 
 function setFavicon(url, doc=document) {
-  let link = document.querySelector("link[rel*='icon']") || document.createElement('link');
+  let link = doc.querySelector("link[rel*='icon']") || doc.createElement('link');
   link.type = 'image/x-icon';
   link.rel = 'shortcut icon';
   link.href = url;
