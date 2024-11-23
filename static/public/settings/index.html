@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Settings - Rizz Proxy</title>
+    <title>Falconlink</title>
 
     <link rel="stylesheet" href="/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -36,7 +36,7 @@
 
         <div class="settingDiv">
             <p class="settingTitle">Open Cloaked </p>
-            <button id="ABCloakButton" onclick="if(inIframe) { window.postMessage('cancelABCloak', '*') } else { ABCloak(false) }" class="settingButton">Activate</button>
+            <button id="ABCloakButton" onclick="if(inIframe) { window.top.postMessage('cancelABCloak', '*') } else { ABCloak(false) }" class="settingButton">Activate</button>
             <script>
                 document.getElementById("ABCloakButton").innerHTML = inIframe ? 'Deactivate' : 'Activate';
             </script>
@@ -51,6 +51,19 @@
                     <a onclick="setColorTheme('retro')">Retro</a>
                     <a onclick="setColorTheme('strawberry')">Strawberry</a>
                     <a onclick="setColorTheme('cafe')">Cafe</a>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="settingDiv">
+            <p class="settingTitle">Tab Cloak</p>
+            <div class="dropdown">
+                <button class="dropbtn">Selector</button>
+                <div class="dropdown-content">
+                    <a onclick="setTabCloak('docs')">Google Docs</a>
+                    <a onclick="setTabCloak('google')">Google</a>
+                    <a onclick="setTabCloak('classroom')">Google Classroom</a>
 
                 </div>
             </div>
