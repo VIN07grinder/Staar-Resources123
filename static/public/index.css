@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
 * {
   box-sizing: border-box;
 }
@@ -19,7 +20,13 @@ body {
   height: calc(100vh - 80px);
   margin: 0;
 }
-
+.centerinput {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 #uv-address {
   width: 40vw;
   text-align: center;
@@ -28,7 +35,7 @@ body {
   height: 68px;
   background: none;
   padding: 0px 17px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid var(--text);
   border-radius: 20px;
   outline: none;
   color: white;
@@ -45,14 +52,20 @@ body {
   font-size: 7em;
   margin: 0px;
   margin-bottom: 5vh;
-  color: #e9f1f7;
+  color: var(--h1);
 }
 
 .subtitle {
-  color: #777a7d;
+  color: var(--text);
   margin: 0;
   margin-bottom: 15px;
   font-size: 25px;
+}
+.w3-input {
+  color: #cccdce;
+}
+::placeholder {
+  color: var(--text);
 }
 
 @keyframes show-proxy-div {

@@ -5,7 +5,7 @@ function showProxy() {
   div.classList = ["show-proxy-div"];
 }
 
-async function openGame(url) {
+async function openApp(url) {
   try {
     await registerSW();
   } catch (err) {
