@@ -41,7 +41,7 @@ document.getElementById("uv-frame").onload = function () {
 }
 
 setInterval(updateURLBar, 250);
-
+ 
 function updateURLBar() {
     if (document.activeElement.id != "nav-bar-address" || lastURL != decodeUV(document.getElementById("uv-frame").contentWindow.location.href)) {
         lastURL = decodeUV(document.getElementById("uv-frame").contentWindow.location.href);
