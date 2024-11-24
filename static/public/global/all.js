@@ -1,3 +1,12 @@
+//Analytics
+try {
+window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+var analyticsScript = document.createElement("script");
+analyticsScript.src = "/_vercel/insights/script.js";
+analyticsScript.defer = true;
+document.head.appendChild(analyticsScript);
+} catch {}
+
 let inIframe;
 try {
   inIframe = window.self !== window.top;
