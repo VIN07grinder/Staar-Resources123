@@ -27,6 +27,6 @@ window.onmessage = (e) => {
   if (e.data == "goHome") {
     let frame = document.getElementById("uv-frame");
     frame.src = "about:blank";
+    hideProxy();
   }
-  hideProxy();
 }
