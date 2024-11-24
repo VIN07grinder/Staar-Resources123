@@ -6,6 +6,7 @@ import { join } from "node:path";
 import { hostname } from "node:os";
 import { createBareServer } from "@nebula-services/bare-server-node";
 import proxy from "express-http-proxy";
+import { inject } from "@vercel/analytics"
 
 const bare = createBareServer("/bare/");
 
@@ -75,3 +76,4 @@ function shutdown() {
 }
 
 server.listen(port, "0.0.0.0");
+inject();
