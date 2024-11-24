@@ -1,3 +1,7 @@
+if (window.parent.location.pathname.startsWith("/games") || window.parent.location.pathname.startsWith("/apps")) {
+    document.getElementById("homeButton").style.visibility = "visible";
+}
+
 function openEruda() {
     const iframe = document.getElementById("uv-frame");
     el = document.createElement("script")
