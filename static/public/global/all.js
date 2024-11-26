@@ -1,10 +1,17 @@
-//Analytics
+//Google Analytics
+try {
+var analyticsScript = document.createElement("script");
+analyticsScript.src = "https://www.googletagmanager.com/gtag/js?id=G-PYBNSB93F8";
+analyticsScript.async = true;
+document.head.appendChild(analyticsScript);
+} catch {}
+//Google Analytics
 try {
 window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-var analyticsScript = document.createElement("script");
-analyticsScript.src = "/_vercel/insights/script.js";
-analyticsScript.defer = true;
-document.head.appendChild(analyticsScript);
+var VanalyticsScript = document.createElement("script");
+VanalyticsScript.src = "/_vercel/insights/script.js";
+VanalyticsScript.defer = true;
+document.head.appendChild(VanalyticsScript);
 } catch {}
 
 let inIframe;
