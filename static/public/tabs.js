@@ -2,7 +2,7 @@ var currentTabId = 0;
 var currentTab = 0;
 var tabIds = [];
 
-function newTab(url = "/tab?page=" + __uv$config.encodeUrl("https://google.com")) {
+function newTab(url = "/tab/newtab.html") {
   var el = document.getElementById("tabBarTabs");
   var tabId = getTabId();
   el.innerHTML += `<div class="tabBarTab w3-bar-item" id="tab` + tabId + `" style="width: 225px" onclick="openTab(` + tabId + `)">
@@ -69,6 +69,8 @@ function closeTab(id) {
   }
   if (currentTab == id && tabIds.length != 0) {
     openTab(currentTab = tabIds[tabIds.length - 1]);
+  } else if (tabIds.length === 0) {
+    goHome();
   }
 }
 
