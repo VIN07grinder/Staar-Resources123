@@ -1,5 +1,5 @@
 if (window.parent.location.pathname.startsWith("/games") || window.parent.location.pathname.startsWith("/apps")) {
-    document.getElementById("homeButton").style.visibility = "visible";
+    document.getElementById("homeButton").style.display = "block";
 }
 
 function openEruda() {
