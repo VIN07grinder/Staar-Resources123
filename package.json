@@ -1,7 +1,7 @@
 {
-  "name": "rizzproxy",
-  "version": "1.0.0",
-  "description": "Rizz Proxy",
+  "name": "FalconLink",
+  "version": "2.0.0",
+  "description": "A web proxy designed to be sleek, cuzomizable, and feature-packed.",
   "type": "module",
   "engines": {
     "npm": ">=7.0.0",
@@ -11,7 +11,11 @@
     "start": "node index.js"
   },
   "keywords": [
-    "proxy"
+    "proxy",
+    "games",
+    "web proxy",
+    "unblocker",
+    "unblocked"
   ],
   "author": "",
   "license": "GPL-3.0-or-later",
