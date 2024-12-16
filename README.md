@@ -17,13 +17,26 @@
 <h3>NOTE: Default port is 8080, you may have to change it with an environment variable depending on how you are hosting FalconLink.</h3>
 
 <h3>How to deploy to a server:</h3>
+<h4>Without Docker or Nginx Proxy Manager (Not as secure and usually harder to add domains)</h4>
 
-1: Clone the repository on your server (run "git clone https://github.com/VIPdestroy/FalconLink")
+1. Clone the repository on your server (run "git clone https://github.com/VIPdestroy/FalconLink")
 
-2: Go to the directory Falconlink is stored in (run "cd FalconLink")
+2. Go to the directory Falconlink is stored in (run "cd FalconLink")
 
-3: Install the nodejs packages (run "npm i")
+3. Install the nodejs packages (run "npm i")
 
-4: Start the server (run "PORT=8080 npm start" or "$env:PORT=8080; npm start" depending on your server - Note: Edit the number to change the port it is hosted on)
+4. Start the server (run "PORT=8080 npm start" or "$env:PORT=8080; npm start" depending on your server - Note: Edit the number to change the port it is hosted on)
 
-5: You have successfully deployed FalconLink! 
+5. You have successfully deployed FalconLink! 
+
+<h4>Using Docker and Nginx Proxy Manager (Recommended)</h4>
+
+1. Make sure you have Docker and Docker-compose installed.
+
+2. Clone the repository on your server (run "git clone https://github.com/VIPdestroy/FalconLink")
+
+3. Go to the directory Falconlink is stored in (run "cd FalconLink")
+
+4. Start the docker containers (run "docker-compose up -d --build")
+
+5. You have successfully deployed FalconLink!
