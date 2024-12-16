@@ -1,5 +1,5 @@
 {
-  "name": "FalconLink",
+  "name": "falconlink",
   "version": "2.0.0",
   "description": "A web proxy designed to be sleek, cuzomizable, and feature-packed.",
   "type": "module",
@@ -26,7 +26,7 @@
     "express": "^4.21.0",
     "express-http-proxy": "^2.1.1",
     "express-session": "^1.18.0",
-    "ultraviolet-static": "file:static"
+    "static": "file:static"
   },
   "devDependencies": {
     "eslint": "^8.36.0",

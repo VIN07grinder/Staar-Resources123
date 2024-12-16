@@ -1,1 +1,7 @@
 node_modules/
+nginx/letsencrypt/
+nginx/data/database.sqlite
+nginx/data/keys.json
+nginx/data/custom_ssl/
+nginx/data/letsencrypt-acme-challenge/
+nginx/data/logs/
