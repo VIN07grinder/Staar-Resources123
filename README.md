@@ -37,6 +37,6 @@
 
 3. Go to the directory Falconlink is stored in (run "cd FalconLink")
 
-4. Start the docker containers (run "docker-compose up -d --build")
+4. Start the docker containers (run "sudo docker-compose up -d --build")
 
 5. You have successfully deployed FalconLink!
