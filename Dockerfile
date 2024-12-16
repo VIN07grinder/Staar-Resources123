@@ -1,22 +1,18 @@
-FROM node:21
+# Use official Node.js image
+FROM node:16
 
-# Set the working directory
-WORKDIR /usr/src/app
+# Set working directory
+WORKDIR /app
 
-#Set PORT env var to 3000
-ENV PORT=3000
-
-# Copy package.json and package-lock.json to install dependencies
+# Copy package.json and install dependencies
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
 
-# Copy the rest of the application code
+# Copy the rest of the app code
 COPY . .
 
-# Expose the port (default port for Node.js apps is usually 3000)
+# Expose the port your app runs on
 EXPOSE 3000
 
-# Command to run the app
+# Command to run your app
 CMD ["npm", "start"]

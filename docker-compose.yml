@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  nginx:
+    image: jc21/nginx-proxy-manager:latest
+    container_name: nginx
+    environment:
+      - DB_SQLITE_FILE=/data/database.sqlite  # Use SQLite database
+    ports:
+      - "80:80"
+      - "443:443"
+      - "81:81"
+    volumes:
+      - ./nginx/data:/data
+      - ./nginx/letsencrypt:/etc/letsencrypt
+    restart: unless-stopped
+
+  nodejs:
+    build:
+      context: .  # Use the current directory (repo root) as the build context
+      dockerfile: Dockerfile  # Specify the Dockerfile to build the Node.js app
+    container_name: nodejs
+    environment:
+      - PORT=3000
+    ports:
+      - "3000:3000"  # Expose Node.js app on port 3000
+    volumes:
+      - .:/app  # Mount the entire project directory to /app in the container
+    working_dir: /app  # Set the working directory inside the container to /app
+    command: ["npm", "start"]  # Start the Node.js app (change if necessary)
+    restart: unless-stopped
