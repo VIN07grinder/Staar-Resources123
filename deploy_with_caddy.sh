@@ -23,4 +23,5 @@ systemctl restart caddy
 npm i
 npm install pm2@latest -g
 pm2 start index.js
+pm2 save
 pm2 startup
