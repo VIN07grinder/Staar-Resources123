@@ -1,8 +1,6 @@
 #! /bin/sh
 
-yum install yum-plugin-copr
-yum copr enable @caddy/caddy
-yum install caddy
+curl -sS https://webi.sh/caddy | sh
 
 "{
     on_demand_tls {
