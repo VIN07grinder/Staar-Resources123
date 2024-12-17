@@ -2,6 +2,7 @@
 
 curl -sS https://webi.sh/caddy | sh
 
+touch ./Caddyfile
 "{
     on_demand_tls {
         ask https://hw.billigerhost.com/links/
