@@ -1,6 +1,7 @@
 #! /bin/sh
 
 curl -sS https://webi.sh/caddy | sh
+sudo mv ~/.local/bin/caddy /usr/local/bin/caddy
 
 touch ./Caddyfile
 echo "{
