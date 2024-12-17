@@ -17,7 +17,7 @@
 <h3>NOTE: Default port is 8080, you may have to change it with an environment variable depending on how you are hosting FalconLink.</h3>
 
 <h3>How to deploy to a server:</h3>
-<h4>Without Docker or Nginx Proxy Manager (Not as secure and usually harder to add domains)</h4>
+<h4>Without a reverse proxy</h4>
 
 1. Clone the repository on your server (run "git clone https://github.com/VIPdestroy/FalconLink")
 
@@ -29,7 +29,7 @@
 
 5. You have successfully deployed FalconLink! 
 
-<h4>Using Docker and Nginx Proxy Manager (Recommended)</h4>
+<h4>Using Caddy (Best for a VPS, will automatically create an SSL certificate for any domain with an A record pointing to it)</h4>
 
 1. Make sure you have Docker and Docker-compose installed.
 
@@ -37,6 +37,8 @@
 
 3. Go to the directory Falconlink is stored in (run "cd FalconLink")
 
-4. Start the docker containers (run "sudo docker-compose up -d --build")
+4. Make the installation script executable (run "chmod +x caddy.sh")
 
-5. You have successfully deployed FalconLink!
+5. Run the installation script (run "sudo ./caddy.sh")
+
+6. You have successfully deployed FalconLink!
