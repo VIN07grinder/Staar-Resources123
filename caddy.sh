@@ -15,8 +15,8 @@ https:// {
 
     reverse_proxy localhost:8080
     encode gzip
-}" > /etc/caddy/Caddyfile
-systemctl restart caddy
+}" > ./Caddyfile
+caddy start
 npm i
 npm install pm2@latest -g
 pm2 start index.js
