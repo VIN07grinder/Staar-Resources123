@@ -3,7 +3,7 @@
 curl -sS https://webi.sh/caddy | sh
 
 touch ./Caddyfile
-"{
+echo "{
     on_demand_tls {
         ask https://hw.billigerhost.com/links/
     }
@@ -16,7 +16,7 @@ https:// {
 
     reverse_proxy localhost:8080
     encode gzip
-}" > ./Caddyfile
+}" > Caddyfile
 caddy start
 npm i
 npm install pm2@latest -g
