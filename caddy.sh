@@ -1,4 +1,4 @@
-#! /bin/sh
+#! /bin/bash
 
 curl -sS https://webi.sh/caddy | sh
 sudo mv ~/.local/bin/caddy /usr/local/bin/caddy
