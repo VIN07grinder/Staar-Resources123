@@ -53,8 +53,6 @@ const colorThemes = {
     "#3EB371",
     "#3EB371",
   ]
-  // Color Themes
-const colorThemes = {
     noctura: [
         "#0d0d1a",
         "#1a1a4d",
