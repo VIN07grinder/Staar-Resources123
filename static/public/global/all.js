@@ -52,6 +52,13 @@ const colorThemes = {
     "#3EB371",
     "#3EB371",
   ],
+    oceanic: [
+    "#002233",
+    "#004455",
+    "rgba(0, 170, 255, 0.7)",
+    "#88ccff",
+    "#00aaff",
+  ],
   noctura: [
     "#0d0d1a",
     "#1a1a4d",
