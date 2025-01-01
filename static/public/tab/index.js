@@ -1,5 +1,19 @@
+var isProxied = true;
+
 if (window.parent.location.pathname.startsWith("/games") || window.parent.location.pathname.startsWith("/apps")) {
     document.getElementById("homeButton").style.display = "block";
+}
+function toggle() {
+  var dropdownContent = document.querySelector(".dropdown-content");
+  if (dropdownContent.style.visibility === "visible") {
+    dropdownContent.style.visibility = "hidden";
+    dropdownContent.style.opacity = 0;
+    dropdownContent.style.transform = "translateY(-20px)";
+  } else {
+    dropdownContent.style.visibility = "visible";
+    dropdownContent.style.opacity = 1;
+    dropdownContent.style.transform = "translateY(0)";
+  }
 }
 
 function openEruda() {
@@ -41,14 +55,14 @@ document.getElementById("uv-frame").onload = function () {
 }
 
 setInterval(updateURLBar, 250);
- 
+
 function updateURLBar() {
-    if (document.activeElement.id != "nav-bar-address" || lastURL != decodeUV(document.getElementById("uv-frame").contentWindow.location.href)) {
-        lastURL = decodeUV(document.getElementById("uv-frame").contentWindow.location.href);
+    if (document.activeElement.id != "nav-bar-address" || lastURL != getTabURL()) {
+        lastURL = getTabURL();
         if (document.getElementById("uv-frame").contentWindow.location.href == "about:blank") {
             document.getElementById("nav-bar-address").value = "about:blank";
         } else {
-            document.getElementById("nav-bar-address").value = decodeUV(document.getElementById("uv-frame").contentWindow.location.href);
+            document.getElementById("nav-bar-address").value = getTabURL();
             if (document.getElementById("nav-bar-address").value.startsWith("https://")) {
                 document.getElementById("https-lock").innerText = "lock";
             } else if (document.getElementById("nav-bar-address").value.startsWith("http://")) {
@@ -60,18 +74,22 @@ function updateURLBar() {
     }
 }
 
-function decodeUV(str) {
-    if (!str) return str;
-    str = decodeURIComponent(str.substring(str.lastIndexOf('/') + 1));
-    return decodeURIComponent(
-        str
-            .toString()
-            .split('')
-            .map((char, ind) =>
-                ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
-            )
-            .join('')
-    );
+function getTabURL() {
+    str = document.getElementById("uv-frame").contentWindow.location.href;
+    if (isProxied) {
+        str = decodeURIComponent(str.substring(str.lastIndexOf('/') + 1));
+        return decodeURIComponent(
+            str
+                .toString()
+                .split('')
+                .map((char, ind) =>
+                    ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char
+                )
+                .join('')
+        );
+    } else {
+        return str;
+    }
 }
 
 function windowPopout() {
@@ -107,7 +125,18 @@ async function startProxy() {
 
     let queryString = new URLSearchParams(window.location.search);
     var url = queryString.get("page");
-    if(url) {
+
+    var proxy = queryString.get("proxy");
+    if (proxy === "false") {
+        isProxied = false;
+        let frame = document.getElementById("uv-frame");
+        frame.src = url;
+        document.getElementById("nav-bar-address").value = "";
+        document.getElementById("https-lock").innerText = "pending";
+        return;
+    }
+
+    if (url) {
         let frame = document.getElementById("uv-frame");
         frame.src = __uv$config.prefix + encodeURIComponent(url);
         document.getElementById("nav-bar-address").value = "";
