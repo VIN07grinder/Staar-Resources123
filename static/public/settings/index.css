@@ -13,7 +13,22 @@ html {
 body {
     background-color: var(--primary);
 }
-
+.footer {
+    background-color: var(--secondary);
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
+ .general {
+    cursor: pointer;
+    margin: 2vh;
+ }
 .main-div {
     padding-top: 40px;
     display: flex;
