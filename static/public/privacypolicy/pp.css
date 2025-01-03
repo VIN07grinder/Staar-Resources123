@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary);
+    color: var(--text);
+}
+.container {
+    width: 80%;
+    margin: 20px auto;
+    background-color: var(--secondary);
+    padding: 20px;
+    border-radius: 8px;
+}
+h1, h2 {
+    color: var(--h1);
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 10px;
+}
+p {
+    margin-bottom: 15px;
+}
