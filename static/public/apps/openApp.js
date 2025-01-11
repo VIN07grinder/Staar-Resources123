@@ -11,12 +11,6 @@ function hideProxy() {
 }
 
 async function openApp(url) {
-  try {
-    await registerSW();
-  } catch (err) {
-    alert("Error. Please contact a server administrator. Error Message: " + err.message);
-  }
-  
   showProxy();
 
   let frame = document.getElementById("uv-frame");
