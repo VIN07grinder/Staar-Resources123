@@ -25,6 +25,10 @@ app.use("/baremux/", express.static(baremuxPath));
 
 // Error for everything else
 app.use((req, res) => {
+  if (res.path == "/discord") {
+    res.redirect("https://discord.gg/TSp7qKf4wY");
+    return;
+  }
   res.status(404);
   res.sendFile(join(publicPath, "404.html"));
 });
