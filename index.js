@@ -23,12 +23,13 @@ app.use("/uv/", express.static(uvPath));
 app.use("/epoxy/", express.static(epoxyPath));
 app.use("/baremux/", express.static(baremuxPath));
 
+// Redirect to Discord
+app.use("/discord/", (req, res) => {
+  res.redirect("https://discord.gg/TSp7qKf4wY");
+});
+
 // Error for everything else
 app.use((req, res) => {
-  if (res.path == "/discord") {
-    res.redirect("https://discord.gg/TSp7qKf4wY");
-    return;
-  }
   res.status(404);
   res.sendFile(join(publicPath, "404.html"));
 });
