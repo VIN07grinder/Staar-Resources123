@@ -1,3 +1,6 @@
+//Google Adsense
+(adsbygoogle = window.adsbygoogle || []).push({});
+
 //Google Analytics
 try {
 var analyticsScript = document.createElement("script");
