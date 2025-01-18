@@ -15,7 +15,7 @@ https:// {
         on_demand
     }
 
-    reverse_proxy localhost:8080
+    reverse_proxy t
     encode gzip
 }" > Caddyfile
 caddy start
