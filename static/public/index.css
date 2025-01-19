@@ -57,13 +57,47 @@ body {
   margin: 0px;
   margin-bottom: 5vh;
   color: var(--h1);
+  transition: .5s linear;
 }
-
+.title:hover {
+  text-shadow: 0 0 10px var(--h1), 0 0 20px var(--h1), 0 0 40px var(--h1);
+}
 .subtitle {
-  color: var(--text);
   margin: 0;
   margin-bottom: 15px;
   font-size: 25px;
+}
+.subtitle {
+  color: var(--text);
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--text),
+    var(--primary)
+  );
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 4s linear forwards;
+}
+
+@keyframes shine {
+  0% {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    background-position: -500%;
+  }
+  99.9999% {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 .w3-input {
   color: #cccdce;
