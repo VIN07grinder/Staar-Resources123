@@ -15,18 +15,6 @@ window.dataLayer = window.dataLayer || [];
 `;
   document.head.appendChild(analyticsScript2);
 } catch {}
-//Vercel Analytics
-try {
-  window.va =
-    window.va ||
-    function () {
-      (window.vaq = window.vaq || []).push(arguments);
-    };
-  var VanalyticsScript = document.createElement("script");
-  VanalyticsScript.src = "/_vercel/insights/script.js";
-  VanalyticsScript.defer = true;
-  document.head.appendChild(VanalyticsScript);
-} catch {}
 
 let inIframe;
 try {
