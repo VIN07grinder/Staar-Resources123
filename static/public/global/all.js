@@ -62,6 +62,20 @@ const colorThemes = {
     "#cccdce",
     "rgba(209, 200, 228, 0.5)",
   ],
+  noctura: [
+    "#0d0d1a",
+    "#1a1a4d",
+    "rgba(26, 26, 255, 0.7)",
+    "#6666ff",
+    "#1a1aff",
+  ],
+  crimson: [
+    "#330000",
+    "#660000",
+    "rgba(220, 20, 60, 0.7)",
+    "#ff8a8a",
+    "#dc143c",
+  ],
   strawberry: [
     "rgb(144, 78, 85)",
     "rgb(106, 78, 85)",
