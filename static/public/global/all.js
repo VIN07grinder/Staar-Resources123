@@ -45,6 +45,20 @@ const colorThemes = {
     "#e9f1f7",
     "#cccdce",
   ],
+  strawberry: [
+    "rgb(144, 78, 85)",
+    "rgb(106, 78, 85)",
+    "rgba(242, 239, 233)",
+    "#e9f1f7",
+    "#cccdce",
+  ],
+  cafe: [
+    "#D6C0B3",
+    "#AB886D",
+    "#493628",
+    "#493628",
+    "#493628",
+  ],
   retro: [
     "#000000",
     "#111111",
@@ -52,7 +66,7 @@ const colorThemes = {
     "#3EB371",
     "#3EB371",
   ],
-    oceanic: [
+  oceanic: [
     "#002233",
     "#004455",
     "rgba(0, 170, 255, 0.7)",
@@ -107,7 +121,7 @@ const colorThemes = {
     "rgba(0, 255, 255, 0.7)",
     "#80ffff",
     "#00ffff",
-  ],
+  ]
 };
 
     
