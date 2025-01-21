@@ -1,6 +1,5 @@
 import express from "express";
 import { createServer } from "node:http";
-import { publicPath } from "./static/lib/index.js";
 import { uvPath } from "@titaniumnetwork-dev/ultraviolet";
 import { epoxyPath } from "@mercuryworkshop/epoxy-transport";
 import { baremuxPath } from "@mercuryworkshop/bare-mux/node";
@@ -16,7 +15,7 @@ app.use("/image/", proxy("https://images.crazygames.com", {proxyReqPathResolver:
 }}));
 
 // Load our publicPath first and prioritize it over UV.
-app.use(express.static(publicPath));
+app.use(express.static("public"));
 // Load vendor files last.
 // The vendor's uv.config.js won't conflict with our uv.config.js inside the publicPath directory.
 app.use("/uv/", express.static(uvPath));
@@ -31,7 +30,7 @@ app.use("/discord/", (req, res) => {
 // Error for everything else
 app.use((req, res) => {
   res.status(404);
-  res.sendFile(join(publicPath, "404.html"));
+  res.sendFile(join(process.cwd(), "public", "404.html"));
 });
 
 const server = createServer();
