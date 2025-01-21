@@ -15,10 +15,15 @@ body {
   margin: 0;
 }
 
+.w3-display-container {
+  border-radius: 10px;
+}
 .search-box {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  height: calc(100vh - 80px);
-  margin: 0;
 }
 .centerinput {
   height: 100%;
@@ -32,12 +37,11 @@ body {
   text-align: center;
   padding: 5px;
   font-size: 14px;
-  height: 60px;
+  height: 50px;
   background: none;
   padding: 0px 17px;
   border: 1px solid var(--text);
-  border-radius: 20px;
-  outline: none;
+  border-radius: 10px;
   color: white;
   transition-duration: 0.5s;
 }
@@ -53,13 +57,47 @@ body {
   margin: 0px;
   margin-bottom: 5vh;
   color: var(--h1);
+  transition: .5s linear;
 }
-
+.title:hover {
+  text-shadow: 0 0 10px var(--h1), 0 0 20px var(--h1), 0 0 40px var(--h1);
+}
 .subtitle {
-  color: var(--text);
   margin: 0;
   margin-bottom: 15px;
   font-size: 25px;
+}
+.subtitle {
+  color: var(--text);
+  position: relative;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  overflow: hidden;
+  background: linear-gradient(
+    90deg,
+    var(--primary),
+    var(--text),
+    var(--primary)
+  );
+  background-repeat: no-repeat;
+  background-size: 80%;
+  animation: shine 4s linear forwards;
+}
+
+@keyframes shine {
+  0% {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+    background-position: -500%;
+  }
+  99.9999% {
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  100% {
+    background-position: 500%;
+  }
 }
 .w3-input {
   color: #cccdce;
