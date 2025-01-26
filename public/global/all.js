@@ -219,7 +219,7 @@ try {
 
 try {
   if (sessionStorage.getItem("firstVisit") === null) {
-    setTimeout(showPage, 2500);
+    setTimeout(showPage, 2200);
     sessionStorage.setItem("firstVisit", "false");
   } else {
     showPage();

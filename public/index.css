@@ -57,7 +57,7 @@ body {
   margin: 0px;
   margin-bottom: 5vh;
   color: var(--h1);
-  transition: .5s linear;
+  transition: 0.5s linear;
 }
 .title:hover {
   text-shadow: 0 0 10px var(--h1), 0 0 20px var(--h1), 0 0 40px var(--h1);
@@ -66,8 +66,6 @@ body {
   margin: 0;
   margin-bottom: 15px;
   font-size: 25px;
-}
-.subtitle {
   color: var(--text);
   position: relative;
   font-family: sans-serif;
@@ -82,7 +80,7 @@ body {
   );
   background-repeat: no-repeat;
   background-size: 80%;
-  animation: shine 4s linear forwards;
+  animation: shine 4s linear infinite;
 }
 
 @keyframes shine {
