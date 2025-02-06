@@ -211,6 +211,22 @@ function ABCloak(redirectToEducationalSite) {
 if (localStorage.getItem("autoAB") == "true") {
   ABCloak(true);
 }
+function panic() {
+  if (!Boolean(localStorage.chosenRedirect)) {
+  //fallback redirect
+    localStorage.chosenRedirect = 'https://classroom.google.com'
+}
+window.top.location.href = localStorage.chosenRedirect; 
+}
+// init panic listener
+if (Boolean(localStorage.panicBool )) {
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && event.key === 'g') {
+    event.preventDefault(); 
+    panic()
+  }
+});
+}
 
 try {
   navigator.serviceWorker.register(stockSW || "/uv/sw.js", {
