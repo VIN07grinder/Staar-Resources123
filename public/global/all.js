@@ -35,12 +35,12 @@ const educationalSites = [
 ];
 const colorThemes = {
   default: [
-    "rgb(33, 15, 89)", //primary
-    "rgb(28, 7, 73)", //secondary
-    "rgba(82, 35, 163, 0.5)", //effects
+    "rgb(28, 21, 48)", //primary
+    "rgba(0, 0, 0, 0.21)", //secondary
+    "rgb(82, 35, 163)", //effects
     "#e9f1f7", //h1
     "#cccdce", //text
-    "rgb(8, 31, 66)", //gradient
+    "rgb(9, 43, 95)", //gradient
   ],
   legacy: [
     "rgb(72, 77, 80)",
@@ -92,12 +92,12 @@ const colorThemes = {
     "#0081c1",
   ],
   shadow: [
-    "rgb(25, 28, 41)", 
+    "rgb(73, 75, 84)", 
     "#333333",
-    "rgba(189, 189, 189, 0.7)",
+    "rgba(152, 135, 135, 0.7)",
     "#e0e0e0",
     "#bdbdbd",
-    "rgb(25, 28, 41)",
+    "rgb(39, 41, 48)",
   ],
   gaming: [
     "rgb(26, 26, 26)",
