@@ -35,7 +35,16 @@
                 document.getElementById("autoABToggle").innerHTML = localStorage.getItem('autoAB') == 'true' ? 'Disable' : 'Enable';
             </script>
         </div>
+        <div class="settingDiv">
+            <p class="settingTitle">Panic Button (ctrl+g)</p>
+            <div class="dropdown">
+                <button class="dropbtn">Selector</button>
+                <div class="dropdown-content" id="panic-selection">
+                    <a onclick="localStorage.removeItem('panicBool')">Off</a>
+                </div>
+            </div>
 
+        </div>
         <div class="settingDiv">
             <p class="settingTitle">Open Cloaked </p>
             <button id="ABCloakButton" onclick="if(inIframe) { window.top.postMessage('cancelABCloak', '*') } else { ABCloak(false) }" class="settingButton">Activate</button>
