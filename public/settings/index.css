@@ -1,6 +1,6 @@
 body {
-    background-color: var(--primary);
-  }
+    background: linear-gradient(to right, var(--primary), 20%, var(--gradient));
+}
   .footer {
     background-color: var(--secondary);
     position: fixed;

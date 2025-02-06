@@ -35,12 +35,13 @@ const educationalSites = [
 ];
 const colorThemes = {
   default: [
-    "rgb(19, 20, 31)", //primary
+    "rgb(25, 28, 41)", //primary
     "rgb(15, 16, 25)", //secondary
     "rgba(82, 35, 163, 0.5)", //effects
     "#e9f1f7", //h1
     "#cccdce", //text
     "rgba(188, 152, 252, 0.5)", //line
+    "rgb(29, 31, 56)", //gradient
   ],
   legacy: [
     "rgb(56, 67, 73)",
@@ -71,20 +72,8 @@ const colorThemes = {
     "#e9f1f7",
     "#cccdce",
   ],
-  cafe: [
-    "#D6C0B3",
-    "#AB886D",
-    "#493628",
-    "#493628",
-    "#493628",
-  ],
-  retro: [
-    "#000000",
-    "#111111",
-    "#3EB371",
-    "#3EB371",
-    "#3EB371",
-  ],
+  cafe: ["#D6C0B3", "#AB886D", "#493628", "#493628", "#493628"],
+  retro: ["#000000", "#111111", "#3EB371", "#3EB371", "#3EB371"],
   oceanic: [
     "#002233",
     "#004555",
@@ -130,7 +119,7 @@ const colorThemes = {
     "rgba(0, 255, 255, 0.7)",
     "#80ffff",
     "#00ffff",
-  ]
+  ],
 };
 //primary
 //secondary
@@ -241,10 +230,7 @@ function loadColorTheme() {
   if (theme === null || !colorThemes[theme]) {
     theme = "default";
   }
-  document.documentElement.style.setProperty(
-    "--primary",
-    colorThemes[theme][0]
-  );
+  document.documentElement.style.setProperty("--primary",colorThemes[theme][0]);
   document.documentElement.style.setProperty(
     "--secondary",
     colorThemes[theme][1]
@@ -256,6 +242,7 @@ function loadColorTheme() {
   document.documentElement.style.setProperty("--h1", colorThemes[theme][3]);
   document.documentElement.style.setProperty("--text", colorThemes[theme][4]);
   document.documentElement.style.setProperty("--bgline", colorThemes[theme][5]);
+  document.documentElement.style.setProperty("--gradient", colorThemes[theme][6]);
 }
 
 loadColorTheme();
