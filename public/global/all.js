@@ -22,6 +22,7 @@ try {
 } catch (e) {
   inIframe = true;
 }
+
 const educationalSites = [
   "https://blooket.com",
   "https://kahoot.it",
@@ -210,7 +211,19 @@ function ABCloak(redirectToEducationalSite) {
 if (localStorage.getItem("autoAB") == "true") {
   ABCloak(true);
 }
-
+// init panic listener
+if (Boolean(localStorage.panicBool )) {
+  if (!Boolean(localStorage.chosenRedirect)) {
+    localStorage.chosenRedirect = 'https://classroom.google.com'
+}
+document.addEventListener('keydown', function(event) {
+  if (event.ctrlKey && event.key === 'g') {
+    event.preventDefault(); 
+    window.top.location.href = localStorage.chosenRedirect; 
+  }
+});
+}
+if (local)
 try {
   navigator.serviceWorker.register(stockSW || "/uv/sw.js", {
     scope: __uv$config.prefix,
