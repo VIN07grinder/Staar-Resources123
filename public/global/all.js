@@ -223,7 +223,6 @@ document.addEventListener('keydown', function(event) {
   }
 });
 }
-if (local)
 try {
   navigator.serviceWorker.register(stockSW || "/uv/sw.js", {
     scope: __uv$config.prefix,
