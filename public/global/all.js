@@ -40,8 +40,7 @@ const colorThemes = {
     "rgba(82, 35, 163, 0.5)", //effects
     "#e9f1f7", //h1
     "#cccdce", //text
-    "rgba(188, 152, 252, 0.5)", //line
-    "rgb(29, 31, 56)", //gradient
+    "rgb(51, 51, 131)", //gradient
   ],
   legacy: [
     "rgb(56, 67, 73)",
@@ -49,33 +48,43 @@ const colorThemes = {
     "rgba(220, 204, 255, 0.5)",
     "#e9f1f7",
     "#cccdce",
-    "rgba(209, 200, 228, 0.5)",
+    "rgb(56, 67, 73)",
   ],
   noctura: [
-    "#0d0d1a",
+    "rgba(13, 13, 26, 1)",
     "#1a1a4d",
-    "rgba(26, 26, 255, 0.7)",
+    "rgba(68, 68, 211, 0.7)",
     "#6666ff",
-    "#1a1aff",
+    "#3030DB",
+    "rgb(21, 21, 39)",
   ],
   crimson: [
-    "#330000",
+    "rgba(51, 0, 0, 1)",
     "#660000",
     "rgba(220, 20, 60, 0.7)",
     "#ff8a8a",
     "#dc143c",
+    "rgb(77, 32, 24)",
   ],
-  strawberry: [
-    "rgb(144, 78, 85)",
-    "rgb(106, 78, 85)",
-    "rgba(242, 239, 233)",
-    "#e9f1f7",
-    "#cccdce",
+  cafe: [
+    "rgb(224, 201, 188)",
+    "#AB886D",
+    "#493628",
+    "#493628",
+    "#493628",
+    "rgb(161, 138, 124)",
   ],
-  cafe: ["#D6C0B3", "#AB886D", "#493628", "#493628", "#493628"],
-  retro: ["#000000", "#111111", "#3EB371", "#3EB371", "#3EB371"],
+  retro: [
+    "rgb(0, 10, 5)",
+    "#111111",
+    "#3EB371",
+    "#3EB371",
+    "#3EB371",
+    "rgb(4, 22, 13)",
+
+  ],
   oceanic: [
-    "#002233",
+    "rgb(0, 34, 51)",
     "#004555",
     "rgba(0, 170, 255, 0.7)",
     "#88ccff",
@@ -97,6 +106,7 @@ const colorThemes = {
     "#ff9e80",
     "#ff4500",
     "rgba(161, 48, 6, 0.7)",
+    "#1a1a1a",
   ],
   galaxy: [
     "#1c0033",
@@ -105,6 +115,7 @@ const colorThemes = {
     "#c3a6ff",
     "#8a2be2",
     "#4c008a",
+    "#1c0033",
   ],
   cyberpunk: [
     "#1a001a",
@@ -112,13 +123,15 @@ const colorThemes = {
     "rgba(255, 0, 255, 0.7)",
     "#ff80ff",
     "#ff00ff",
+    "#1a001a",
   ],
-  techno: [
+  emerald: [
     "#001f1f",
     "#003333",
     "rgba(0, 255, 255, 0.7)",
     "#80ffff",
     "#00ffff",
+    "#001f1f",
   ],
 };
 //primary
@@ -230,7 +243,10 @@ function loadColorTheme() {
   if (theme === null || !colorThemes[theme]) {
     theme = "default";
   }
-  document.documentElement.style.setProperty("--primary",colorThemes[theme][0]);
+  document.documentElement.style.setProperty(
+    "--primary",
+    colorThemes[theme][0]
+  );
   document.documentElement.style.setProperty(
     "--secondary",
     colorThemes[theme][1]
@@ -241,8 +257,10 @@ function loadColorTheme() {
   );
   document.documentElement.style.setProperty("--h1", colorThemes[theme][3]);
   document.documentElement.style.setProperty("--text", colorThemes[theme][4]);
-  document.documentElement.style.setProperty("--bgline", colorThemes[theme][5]);
-  document.documentElement.style.setProperty("--gradient", colorThemes[theme][6]);
+  document.documentElement.style.setProperty(
+    "--gradient",
+    colorThemes[theme][5]
+  );
 }
 
 loadColorTheme();
