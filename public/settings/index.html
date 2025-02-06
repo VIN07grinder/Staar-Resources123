@@ -45,8 +45,8 @@
             </div>
 
         </div>
-        <div class="settingDiv">
-            <p class="settingTitle">Open Cloaked </p>
+        <div class="settingDiv ">
+            <p class="settingTitle ">Open Cloaked </p>
             <button id="ABCloakButton" onclick="if(inIframe) { window.top.postMessage('cancelABCloak', '*') } else { ABCloak(false) }" class="settingButton">Activate</button>
             <script>
                 document.getElementById("ABCloakButton").innerHTML = inIframe ? 'Deactivate' : 'Activate';
