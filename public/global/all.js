@@ -35,20 +35,20 @@ const educationalSites = [
 ];
 const colorThemes = {
   default: [
-    "rgb(25, 28, 41)", //primary
+    "rgb(41, 30, 71)", //primary
     "rgb(15, 16, 25)", //secondary
     "rgba(82, 35, 163, 0.5)", //effects
     "#e9f1f7", //h1
     "#cccdce", //text
-    "rgb(51, 51, 131)", //gradient
+    "rgb(53, 53, 148)", //gradient
   ],
   legacy: [
-    "rgb(56, 67, 73)",
+    "rgb(72, 77, 80)",
     "rgb(29, 30, 34)",
     "rgba(220, 204, 255, 0.5)",
     "#e9f1f7",
     "#cccdce",
-    "rgb(56, 67, 73)",
+    "rgb(64, 91, 105)",
   ],
   noctura: [
     "rgba(13, 13, 26, 1)",
@@ -56,7 +56,7 @@ const colorThemes = {
     "rgba(68, 68, 211, 0.7)",
     "#6666ff",
     "#3030DB",
-    "rgb(21, 21, 39)",
+    "rgb(25, 25, 61)",
   ],
   crimson: [
     "rgba(51, 0, 0, 1)",
@@ -67,7 +67,7 @@ const colorThemes = {
     "rgb(77, 32, 24)",
   ],
   cafe: [
-    "rgb(224, 201, 188)",
+    "rgb(197, 177, 165)",
     "#AB886D",
     "#493628",
     "#493628",
@@ -75,12 +75,12 @@ const colorThemes = {
     "rgb(161, 138, 124)",
   ],
   retro: [
-    "rgb(0, 10, 5)",
+    "rgb(0, 0, 0)",
     "#111111",
     "#3EB371",
     "#3EB371",
     "#3EB371",
-    "rgb(4, 22, 13)",
+    "rgb(12, 20, 16)",
 
   ],
   oceanic: [
@@ -92,21 +92,20 @@ const colorThemes = {
     "#0081c1",
   ],
   shadow: [
-    "#1c1c1c",
+    "rgb(25, 28, 41)", 
     "#333333",
     "rgba(189, 189, 189, 0.7)",
     "#e0e0e0",
     "#bdbdbd",
-    "#909090",
+    "rgb(25, 28, 41)",
   ],
   gaming: [
-    "#1a1a1a",
+    "rgb(26, 26, 26)",
     "#333333",
     "rgba(255, 69, 0, 0.7)",
     "#ff9e80",
     "#ff4500",
-    "rgba(161, 48, 6, 0.7)",
-    "#1a1a1a",
+    "rgb(26, 26, 26)",
   ],
   galaxy: [
     "#1c0033",
