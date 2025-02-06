@@ -28,5 +28,5 @@ function setTabCloak(cloak) {
 }
 // populate list of possible panic buttons
 educationalSites.forEach((link) => {
-    document.getElementById("panic-selection").innerHTML += `<a onclick="localStorage.panicBool='its on and stuff';localStorage.chosenRedirect='${link};'">${link}</a>`
+    document.getElementById("panic-selection").innerHTML += `<a onclick="localStorage.panicBool='its on and stuff';localStorage.chosenRedirect='${link}'">${link}</a>`
 })
