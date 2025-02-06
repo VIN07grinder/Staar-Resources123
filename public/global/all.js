@@ -35,12 +35,12 @@ const educationalSites = [
 ];
 const colorThemes = {
   default: [
-    "rgb(64, 45, 117)", //primary
-    "rgb(52, 38, 90)", //secondary
+    "rgb(33, 15, 89)", //primary
+    "rgb(28, 7, 73)", //secondary
     "rgba(82, 35, 163, 0.5)", //effects
     "#e9f1f7", //h1
     "#cccdce", //text
-    "rgb(53, 53, 148)", //gradient
+    "rgb(8, 31, 66)", //gradient
   ],
   legacy: [
     "rgb(72, 77, 80)",
