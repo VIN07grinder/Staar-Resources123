@@ -1,8 +1,8 @@
 body {
-    background-color: var(--primary);
-  }
+    background: linear-gradient(50deg, var(--primary), 70%, var(--gradient));
+    height: 120vh;
+}
   .footer {
-    background-color: var(--secondary);
     position: fixed;
     left: 0;
     bottom: 0;
