@@ -36,7 +36,7 @@ const educationalSites = [
 const colorThemes = {
   default: [
     "rgb(28, 21, 48)", //primary
-    "rgba(0, 0, 0, 0.21)", //secondary
+    "rgb(17,21,48)", //secondary
     "rgb(82, 35, 163)", //effects
     "#e9f1f7", //h1
     "#cccdce", //text
