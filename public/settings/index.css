@@ -78,7 +78,7 @@ body {
   display: flex;
   flex-direction: column;
   position: absolute;
-  background-color: var(--primary);
+  background-color: orange;
   box-shadow: 0 0 30px var(--effects);
   z-index: 1;
   transform: translateY(-20px);
