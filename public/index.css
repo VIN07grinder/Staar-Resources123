@@ -68,9 +68,6 @@ body {
   margin: 0px;
   margin-bottom: 5vh;
   color: var(--h1);
-  transition: 0.5s linear;
-  animation: load 0.6s ease-out;
-
 }
 .title:hover {
   text-shadow: 0 0 10px var(--h1), 0 0 20px var(--h1), 0 0 40px var(--h1);
