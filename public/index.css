@@ -6,8 +6,8 @@
 }
 
 body {
-  background: linear-gradient(50deg, red 0%, red 100%);
-
+  background: #FF6B01;
+  background: radial-gradient(at center, #FF6B01, #EE4B2B);
 }
 
 @keyframes load {
