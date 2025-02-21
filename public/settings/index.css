@@ -53,7 +53,7 @@ body {
 }
 
 .settingButton:hover {
-  color: var(--primary);
+  color: yellow;
   background-color: var(--text);
   cursor: pointer;
 }
