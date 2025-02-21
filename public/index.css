@@ -82,12 +82,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 4px;
   overflow: hidden;
-  background: linear-gradient(
-    90deg,
-    var(--primary),
-    var(--text),
-    var(--primary)
-  );
+  background: transparent;
 }
 
 @keyframes shine {
