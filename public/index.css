@@ -88,10 +88,6 @@ body {
     var(--text),
     var(--primary)
   );
-  background-repeat: no-repeat;
-  background-size: 80%;
-  animation: shine 4s linear forwards;
-  
 }
 
 @keyframes shine {
