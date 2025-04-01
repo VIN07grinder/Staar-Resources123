@@ -22,7 +22,7 @@ function setTabCloak(cloak) {
             break;
             
         case "falconlink":
-            setCloak("FalconLink", "/favicon.ico");
+            setCloak("Vboi's Games", "/favicon.ico");
             break;
     }
 }
