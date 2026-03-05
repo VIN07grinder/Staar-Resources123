@@ -8,7 +8,9 @@
     "node": ">=16.0.0"
   },
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "deploy": "wrangler deploy",
+    "preview": "wrangler dev"
   },
   "keywords": [
     "proxy",
@@ -32,6 +34,7 @@
   },
   "devDependencies": {
     "eslint": "^8.36.0",
-    "prettier": "^2.8.4"
+    "prettier": "^2.8.4",
+    "wrangler": "^4.70.0"
   }
 }
